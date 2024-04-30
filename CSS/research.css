@@ -1,0 +1,245 @@
+@font-face{
+    font-family: heading;              /* Importing fonts */
+    src:url(../Fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: dancing script;
+    src:url(../Fonts/DancingScript-Medium.ttf);
+}
+
+@font-face {
+    font-family: allura;
+    src: url(../Fonts/Allura-Regular.ttf);
+}          
+
+*, *::before, *::after{
+    box-sizing: border-box;/* defaulting border-box*/
+}
+
+html{
+    scroll-behavior: smooth;/*scroll behaviour smooth to make transition smooth while using navbar*/
+}
+
+body{
+    margin: 0;/*defaulting margin to 0 so that background image can fit fully in the screen*/
+    overflow-x: hidden;/*to not allow scroll in x-axis*/
+    align-items: center;                
+}
+
+
+.header{                                           /*Nav-bar starts here*/
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    padding: 1px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;/*it describes depth of a content*/
+    background-color: #000000;       
+    transition: top 0.5s;       
+}   
+
+.logo{
+    font-family: 'Dancing Script';
+    position: relative;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;/*to remove underline of hyperlink*/
+    font-weight: 700;
+}
+
+.navbar a{/*Characteristics of the navbar*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+
+.navbar a::before{/*responsibe for the underline animation in nav-bar*/
+    content: '';                      
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: .5s;/*describes the amount of time given for a transition*/
+}
+
+.navbar a:hover::before{
+    width: 100%;
+    font-size: 25px;
+}                                                     /*Nav-bar ends here*/
+
+.start{                                              /*Background img 1 starts here.*/
+    background: url('../Img/Research/background/start-bg.jpg') center/cover no-repeat;;/*center represents back-ground postition and cover represents background-size.*/
+    text-align: center;
+    padding-top: 17rem;
+    padding-bottom: 20rem;
+}
+
+.Start1 h1{/*The "About Us"font at the starting */
+    font-family: 'dancing script';     
+    color: white;
+    text-decoration: none;/*to remove underline of hyperlink*/
+    font-weight: 700;
+    cursor: default;
+    font-size: 8rem;
+    margin-bottom: -20px;
+    transition: 1s;
+}
+
+.Start1 p{
+    font-family: heading;
+    font-size: 15px;
+    margin-top: -0px;
+    color: rgb(255, 255, 255);
+    cursor: default;
+}
+
+.Start1 h1:hover{/*Hover Animation for the heading*/
+    font-size: 11rem;
+}                                                        /*background image 1 ends here*/
+
+.goToTopBtn {                                           /*Go to top button starts here.*/
+    position: fixed;
+    bottom: 20px;
+    text-decoration: none;
+    right: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    width: 70px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;    
+    z-index: 100;
+    border-radius: 50px;
+    font-weight: 700;
+    opacity: 0;
+    transition: 1s;
+}
+
+section:hover .goToTopBtn,
+footer:hover .goToTopBtn{
+    opacity: 1;
+}                                                    /*Go to top button ends here.*/
+
+                                                   /*Background image 2 starts here*/
+.research{/*This is the research part*/
+    background: url("../Img/Research/background/reserarch-bg.jpg")bottom /cover;/*center represents back-ground postition and cover represents background-size.*/
+    text-align: center;
+    padding-top: 15rem;
+    padding-bottom: 30rem;
+    margin-bottom: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.research h1{
+    font-size: 3rem;
+}
+
+.research .part1 h1{
+    margin-top: -200px;
+}
+
+.research p{  
+    margin-top: 4%;
+    margin-left: 13%;
+    max-width: 1000px;
+    font-size: large;
+}
+
+.part2, .part3, .part4, .part5 {
+    margin-top: 3%;
+}
+/*Background image 2 ends here*/
+
+ul{                 /*footer starts here*/
+    list-style: none; 
+    padding-left: 0px;
+}
+ 
+footer li, footer h4{                                           /*footer starts here*/
+    /* Had to add li and h4 as it was conflicting with gototop button line height. */
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container2{
+   max-width: 1170px;  
+   margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.footer{
+    background-color: black;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+.column{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.column h4{
+    font-size:18px;
+    color:white;
+    text-transform: capitalize;/*Makes first letter of each word capital.*/
+    margin-bottom:30px;
+    font-weight: 800;
+    position: relative;
+}
+
+.column h4::before{
+    content:'';
+    position: absolute;
+    left: 0%;
+    bottom:-10px;
+    background-color:#e91e63 ;
+    height:2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.column ul li a{
+    font-size: 16px;
+    text-transform:capitalize;/*Makes first letter of each word capital.*/
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.column ul li a:hover{
+    padding-left: 8px;
+
+}
+
+.column2{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}                                        /*footer ends here*/
