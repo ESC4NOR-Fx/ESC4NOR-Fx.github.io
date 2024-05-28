@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+}
+
+
+.background{
+    width: 100%;
+    height : 100vh;
+    background:  linear-gradient(#000000, #514b4b);
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    position: relative;
+    background: rgb(191, 186, 186);
+    width:40%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.row{
+    display: flex;
+    margin: 10px 0px;
+}
+
+
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #ede7e7;
+    padding: 5px 0px 5px 10px;
+}
+
+button{
+    background-color: orangered;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    margin-left: -30px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+ul li span{
+    position: absolute;
+    text-align: center;
+    right: 35px;
+    width: 20px;
+    height: 20px;
+    color: #555;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+ul li span:hover{
+    background: #9e9c9c;
+}
